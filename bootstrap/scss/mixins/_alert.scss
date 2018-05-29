@@ -1,0 +1,22 @@
+@mixin alert-variant($background, $color) {
+  @if ($background == $gray-100) {
+    $color: $dark;
+  }
+
+  color: $color;
+  background-color: $background;
+  //border-color: $border;
+
+  hr {
+    //border-top-color: darken($border, 5%);
+  }
+
+  .alert-link {
+    @if ($background == $gray-100) {
+      $color: $dark;
+    }
+    color: $color;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+}
