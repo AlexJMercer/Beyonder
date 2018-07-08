@@ -96,6 +96,13 @@ $theme-colors: (
   info: $cyan,
   warning: $yellow,
   danger: $red,
+  purple:$purple,
+  indigo: $indigo,
+  yellow_neon: #EBEA6B,
+  softgreen: #92CE92,
+  pink: $pink,
+  softpink: #E33D7E,
+  softpurple: #725991,
   light: $gray-100,
   dark: $dark
 );
@@ -104,6 +111,7 @@ $gradient-peach:      linear-gradient(40deg, #FFD86F, #FC6262);
 $gradient-aqua:       linear-gradient(40deg, #3aa2ff, #1fffac);
 $gradient-purple:     linear-gradient(40deg, #ff88ce, #8f8bf7);
 $gradient-blue:       linear-gradient(40deg, #5ed1fc, #3647b3);
+
 
 $enable-rounded:            true;
 $enable-shadows:            true;

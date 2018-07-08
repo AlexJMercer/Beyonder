@@ -10,9 +10,9 @@
   word-wrap: break-word;
   background-color: $card-bg;
   background-clip: border-box;
-  border: $card-border-width solid $card-border-color;
+  //border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
-  @include shadow-2dp();
+  @include shadow-4dp();
 
   > hr {
     margin-right: 0;
@@ -37,6 +37,10 @@
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
   padding: $card-spacer-x;
+
+  &-material {
+    margin-bottom: 2rem;
+  }
 }
 
 .card-signup{
@@ -50,6 +54,10 @@
 
 .card-title {
   margin-bottom: $card-spacer-y;
+
+  &-material{
+    margin-top: 1.875rem;
+  }
 }
 
 .card-subtitle {
@@ -109,13 +117,15 @@
 
 .card-footer {
   padding: $card-spacer-y $card-spacer-x;
-  /*background-color: $card-cap-bg;
+  /*background-color: $card-cap-bg;*/
   border-top: $card-border-width solid $card-border-color;
-*/
+
   &:last-child {
     @include border-radius(0 0 $card-inner-border-radius $card-inner-border-radius);
   }
 }
+
+
 
 
 //

@@ -37,7 +37,7 @@
   @include hover-focus {
     &:not(.btn-link){
       text-decoration: none;
-      @include shadow-6dp();
+      @include shadow-4dp();
     }
   }
 
@@ -106,6 +106,7 @@ fieldset:disabled a.btn {
   @include hover {
     text-decoration: underline;
     border-color: transparent;
+    color: inherit;
   }
 
   &:focus,

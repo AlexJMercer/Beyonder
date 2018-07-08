@@ -1,0 +1,29 @@
+{
+  "name": "beyonder",
+  "version": "1.0.0",
+  "description": "Learning, improving front-end skills and using my criativity",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "fsevents": "^1.2.4",
+    "fullpage.js": "^2.9.7",
+    "mdbootstrap": "^4.5.3",
+    "particles.js": "^2.0.0"
+  },
+  "scripts": {
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap.scss dist/css/bootstrap.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap-grid.scss dist/css/bootstrap-grid.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap-reboot.scss dist/css/bootstrap-reboot.css"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexJMercer/Beyonder.git"
+  },
+  "author": "AlexJMercer aka Julian Cunha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexJMercer/Beyonder/issues"
+  },
+  "homepage": "https://github.com/AlexJMercer/Beyonder#readme"
+}
