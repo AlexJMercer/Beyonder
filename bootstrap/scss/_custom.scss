@@ -210,6 +210,13 @@ $tooltip-arrow-color:         $tooltip-bg;
 
 $progress-height:               .25rem;
 
+// Masks
+$mask-overlay-transition:     all .4s ease-in-out !default;
+$mask-zoom-transition:        all .2s linear !default;
+$mask-zoom-transform:         scale(1.1) !default;
+$intro-video-transform:       translateX(-50%) translateY(-50%) !default;
+$intro-video-transition:      1s !default;
+
 // Animations
 $md-animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
 $md-animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1);

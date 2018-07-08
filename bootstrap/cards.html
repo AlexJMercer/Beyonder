@@ -29,22 +29,6 @@
           padding: 3rem 1.5rem;
           text-align: center;
         }
-        .view{
-          position: relative;
-        }
-        .mask{
-          position: absolute;
-          top: 0;
-          overflow: hidden;
-          width: 100%;
-          height: 100%;
-          background-attachment: fixed;
-          background: url("img-ext/space.png");
-        }
-
-        .pattern{
-
-        }
     </style>
   </head>
 
@@ -162,32 +146,26 @@
           </div>
         </div>
         <div class="col-md-8 ml-auto mr-auto mb-5">
-          <div class="card bg-dark text-white" style="width: 20rem;">
+          <div class="card bg-dark text-white view" style="width: 20rem;">
             <img class="card-img" src="img-ext/img-test.png" alt="Card image">
-            <div class="card-img-overlay">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text">Last updated 3 mins ago</p>
+            <div class="mask rgba-red-light">
+
+
+              <div class="card-img-overlay">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card" style="width: 20rem;">
-          <div class="card-picture view">
-            <div class="mask pattern">
-              <img class="img-fluid rounded" src="img-ext/img-test.png" alt="Card image cap">
+
+        <div class="view">
+            <img src="https://mdbootstrap.com/img/Photos/Others/nature-sm.jpg" class="img-fluid" alt="">
+            <div class="mask text-center">
+                <p class="white-text">strong overlay</p>
             </div>
-          </div>
-          <div class="card-body text-center">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-            <!--a href="#" class="btn btn-raised btn-primary waves">Go somewhere</a-->
-          </div>
-          <div class="card-footer card-border">
-            <button type="button" class="btn btn-outline-primary waves">Primary</button>
-          </div>
         </div>
-
       </div>
     </div>
 
