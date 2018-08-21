@@ -1,0 +1,226 @@
+//@import "node_modules/bootstrap/scss/bootstrap";
+//@import "colors";
+
+
+// stylelint-disable
+$white:  #fff ;
+$gray-100: #f8f9fa ;
+$gray-200: #e9ecef ;
+$gray-300: #dee2e6 ;
+$gray-400: #ced4da ;
+$gray-500: #adb5bd ;
+$gray-600: #868e96 ;
+$gray-700: #495057 ;
+$gray-800: #343a40 ;
+$gray-900: #212529 ;
+$black:  #000 ;
+
+$grays: () !default;
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
+$blue:    #03a9f4;
+$indigo:  #3f51b5;
+$purple:  #9c27b0;
+$pink:    #e91e63;
+$red:     #f44336;
+$orange:  #ff6d00;
+$yellow:  #fbc02d;
+$green:   #00c853;
+$teal:    #00bfa5;
+$cyan:    #00bcd4;
+$white:   #ffffff;
+$dark:    #000a0c;
+
+$colors: () !default;
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+/*$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":    $teal,
+  "secondary":  $gray-600,
+  "success":    $green,
+  "info":       $cyan,
+  "warning":    $yellow,
+  "danger":     $red,
+  "light":      $gray-100,
+  "dark":       $dark
+), $theme-colors);
+*/
+
+/*
+$colors: (
+  blue: $blue,
+  indigo: $indigo,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray-600,
+  gray-dark: $gray-800,
+  dark: $dark
+);
+*/
+$theme-colors: (
+  primary: $teal,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  purple:$purple,
+  indigo: $indigo,
+  yellow_neon: #EBEA6B,
+  softgreen: #92CE92,
+  pink: $pink,
+  softpink: #E33D7E,
+  softpurple: #725991,
+  orange: $orange,
+  light: $gray-100,
+  dark: $dark
+);
+
+$gradient-peach:      linear-gradient(40deg, #FFD86F, #FC6262);
+$gradient-aqua:       linear-gradient(40deg, #3aa2ff, #1fffac);
+$gradient-purple:     linear-gradient(40deg, #ff88ce, #8f8bf7);
+$gradient-blue:       linear-gradient(40deg, #5ed1fc, #3647b3);
+
+
+$enable-rounded:            true;
+$enable-shadows:            true;
+$enable-gradients:          true;
+$enable-transitions:        true;
+$enable-hover-media-query:  true;
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
+
+$border-radius:          0.125rem;
+$border-radius-lg:       0.625rem;
+//$border-radius-sm:       0.125rem;
+$border-radius-flat:     0;
+
+$font-weight-custom: 500;
+//$font-weight:;
+
+$font-family-sans-serif:    Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$font-family-base:          $font-family-sans-serif;
+
+$navbar-padding-y:          0.75rem;
+$navbar-padding-x:          1rem;
+
+$input-btn-padding-y:       .75rem;
+$input-btn-padding-x:       1.875rem;
+
+$input-btn-padding-y-sm:    0.3125rem;
+$input-btn-padding-x-sm:    1.25rem;
+
+$input-btn-padding-y-lg:    1.125rem;
+$input-btn-padding-x-lg:    2.375rem;
+
+$btn-font-weight:                $font-weight-custom;
+$btn-rounded-border:             10em;
+$btn-border-radius:              $border-radius;
+$btn-border-radius-lg:           $border-radius;
+$btn-border-radius-sm:           $border-radius;
+$btn-border-radius-flat:         $border-radius-flat;
+
+$input-padding-x:                0;//.75rem;
+$input-padding-y:                .5rem;
+
+$input-padding-x-sm:             0;//.5rem;//8px
+$input-padding-y-sm:             .25rem;//4px
+
+$input-padding-x-lg:             0;//1.5rem;//24px
+$input-padding-y-lg:             .75rem;//12px
+
+$input-line-height:              1.25;
+
+$input-transition:              background 0s ease-out;
+
+$input-btn-border-width:         0; // For form controls and buttons
+$input-box-shadow:               none;
+
+// sizing
+$md-form-line-height: 1; // set as 1x font-size so that padding is easier calculated to match the spec.
+$md-label-top-margin-base: 1rem;
+
+$md-form-line-height-lg: 1; // set as 1x font-size so that padding is easier calculated to match the spec.
+$md-label-top-margin-lg: 1rem; // 16px
+
+$md-form-line-height-sm: 1; // set as 1x font-size so that padding is easier calculated to match the spec.
+$md-label-top-margin-sm: .75rem; // 12px
+
+
+$alert-border-radius:         $border-radius-flat;
+/*$checkbox-animation-check: 0.3s;
+$checkbox-checked-color: $blue;
+$checkbox-transform-scale: 2.3, 2.3, 1;
+$checkbox-animation-ripple: 500ms;
+*/
+
+$alert-padding-y:             1.25rem;
+$alert-padding-x:             1.25rem;
+$alert-font-size:             0.875rem;
+
+$shadow-key-penumbra-opacity:     0.14;
+$shadow-key-umbra-opacity:        0.2;
+$shadow-ambient-shadow-opacity:   0.12;
+
+$badge-font-size:             75%;
+$badge-font-weight:           $font-weight-custom;
+$badge-padding-y:             .5em;
+$badge-padding-x:             .75em;
+
+$badge-pill-padding-x:        .75em;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+$badge-pill-border-radius:    10rem;
+
+$tooltip-padding-y:           .5rem;
+$tooltip-padding-x:           .75rem;
+$tooltip-color:               $white;
+$tooltip-bg:                  rgba(#616161, .9);
+$tooltip-arrow-color:         $tooltip-bg;
+
+$progress-height:               .25rem;
+
+// Masks
+$mask-overlay-transition:     all .4s ease-in-out !default;
+$mask-zoom-transition:        all .2s linear !default;
+$mask-zoom-transform:         scale(1.1) !default;
+$intro-video-transform:       translateX(-50%) translateY(-50%) !default;
+$intro-video-transition:      1s !default;
+
+// Animations
+$md-animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
+$md-animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1);
+$md-animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1);
+$md-animation-curve-default: $md-animation-curve-fast-out-slow-in;

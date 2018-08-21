@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <!--link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet"-->
+    <!--link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet"-->
+    <!--link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet"-->
+    <!--Fonts and icons-->
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="ext/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/ripple.min.css">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
+
+      <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+
+      body{
+        padding-top: 5.5rem;
+        background-image: url('https://i.imgur.com/DFUPYfm.jpg');
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <div class="navbar-form form-group">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <div class="container-fluid mt-5">
+      <div class="col-8 offset-2 mx-auto mt-5">
+        <div class="card bg-soft-transparency">
+          <div class="card-header text-center card-material thin bg-info">
+            Coleção: Revistas Playboy <span class="badge badge-success">Completa!</span>
+          </div>
+          <div class="card-body text-light px-5">
+            <h4 class="card-title text-center">Playboy Cléo Pires Edição de Aniversário de 35 anos</h4>
+            <div class="row mt-4">
+              <div class="col-4 mb-4">
+                <img class="img-fluid shadow-image rounded" src="https://i.imgur.com/sluMo6o.jpg" title="source: imgur.com" />
+                <p class="card-text text-center">Capa</p>
+              </div>
+
+                <div class="col-8">
+                  <dl class="row ">
+                    <dt class="col-sm-4">Estrela de Capa:</dt>
+                    <dd class="col-sm-8">Cléo Pires</dd>
+
+                    <dt class="col-sm-4">Edição:</dt>
+                    <dd class="col-sm-8">423</dd>
+
+                    <dt class="col-sm-4">Data:</dt>
+                    <dd class="col-sm-8">Agosto/2010</dd>
+
+                    <dt class="col-sm-4">Entrevista:</dt>
+                    <dd class="col-sm-8">Danilo Gentili</dd>
+
+                    <dt class="col-sm-4">Fotográfo:</dt>
+                    <dd class="col-sm-8">Bob Wolfenson & Jacques Dequeker </dd>
+
+                    <dt class="col-sm-4">Informações extras:</dt>
+                    <dd class="col-sm-8">20 Perguntas para: Natália Lage</dd>
+
+                  </dl>
+                </div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="mb-5">
+
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/dist/ripple.min.js"></script>
+    <script type="text/javascript" src="ext/waves.min.js"></script>
+    <script type="text/javascript">
+      //Waves.init();
+      //Waves.attach('.btn', ['waves-float', 'waves-light']);
+      $.ripple(".btn", {
+                debug: false, // Turn Ripple.js logging on/off
+                on: 'mousedown', // The event to trigger a ripple effect
+
+                opacity: 0.4, // The opacity of the ripple
+                color: "auto", // Set the background color. If set to "auto", it will use the text color
+                multi: false, // Allow multiple ripples per element
+
+                duration: 0.5, // The duration of the ripple
+
+                // Filter function for modifying the speed of the ripple
+                rate: function(pxPerSecond) {
+                      return pxPerSecond;
+                  },
+
+                easing: 'linear' // The CSS3 easing function of the ripple
+                });
+    </script>
+  </body>
+</html>

@@ -6,7 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <!--link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet"-->
+    <!--link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet"-->
+    <!--link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet"-->
     <!--Fonts and icons-->
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="ext/font-awesome.min.css">
@@ -24,11 +26,17 @@
     <style>
         body {
           /*padding-top: 5rem;*/
+          font-family: ;
         }
         .starter-template {
           padding: 3rem 1.5rem;
           text-align: center;
         }
+        .my-card-media{
+          background-image: url("img-ext/img-test.png");
+
+        }
+
     </style>
   </head>
 
@@ -87,8 +95,32 @@
         </div>
         <div class="col-md-4 ml-auto mr-auto">
           <div class="card text-center" style="width: 20rem;">
-            <div class="card-image">
+
+            <div class="card-image view">
+
               <img class="img-fluid rounded" src="img-ext/img-test.png" alt="Card image cap">
+              <div class="mask rgba-orange-strong">
+                <a href="#" class="nav-link float-right">
+                  <i class="material-icons">more_vert</i>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button type="button" class="btn btn-raised btn-primary btn-block waves">Primary</button>
+              <!--a href="#" class="btn btn-raised btn-primary waves">Go somewhere</a-->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ml-auto mr-auto">
+          <div class="card text-center" style="width: 350px;">
+            <div class="">
+              <div class="card-picture image-box">
+                <img class="card-img rounded" src="img-ext/img-test.png" alt="Card image cap">
+              </div>
             </div>
             <div class="card-body">
               <h4 class="card-title">Card title</h4>
@@ -103,14 +135,22 @@
             <div class="card-picture">
               <img class="img-fluid rounded" src="img-ext/img-test.png" alt="Card image cap">
             </div>
-            <div class="card-body text-center">
+            <div class="card-body">
+              <a href="#" class="float-right">
+              <i class="material-icons">more_vert</i>
+              </a>
               <h4 class="card-title">Card title</h4>
+
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
               <!--a href="#" class="btn btn-raised btn-primary waves">Go somewhere</a-->
             </div>
             <div class="card-footer card-border">
+
               <button type="button" class="btn btn-outline-primary waves">Primary</button>
+              <a href="#" class="nav-link float-right">
+                <i class="material-icons">more_vert</i>
+              </a>
             </div>
           </div>
         </div>
@@ -148,17 +188,53 @@
         <div class="col-md-8 ml-auto mr-auto mb-5">
           <div class="card bg-dark text-white view" style="width: 20rem;">
             <img class="card-img" src="img-ext/img-test.png" alt="Card image">
-            <div class="mask rgba-red-light">
-
-
+            <div class="mask rgba-orange-strong">
               <div class="card-img-overlay">
+                <a href="#" class="float-right">
+                  <i class="material-icons">more_vert</i>
+                </a>
                 <h4 class="card-title">Card title</h4>
+
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <p class="card-text">Last updated 3 mins ago</p>
+
+
+
+                </div>
               </div>
+
             </div>
           </div>
         </div>
+
+      <div class="col-md-3">
+        <div class="card mb-3">
+          <div class="card-picture ">
+            <img class="card-img" src="img-ext/img-test.png" alt="Card image cap">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card mb-3">
+          <div class="my-card-media card-media card-aspect-16-9 ">
+            <!--img class="" src="img-ext/img-test.png" alt="Card image cap"-->
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+
 
         <div class="view">
             <img src="https://mdbootstrap.com/img/Photos/Others/nature-sm.jpg" class="img-fluid" alt="">

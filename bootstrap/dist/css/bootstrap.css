@@ -39,6 +39,14 @@ $checkbox-checked-color: $blue;
 $checkbox-transform-scale: 2.3, 2.3, 1;
 $checkbox-animation-ripple: 500ms;
 */
+.card {
+  border-radius: 0px;
+}
+
+.btn {
+  text-transform: none;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -5115,11 +5123,19 @@ input[type="button"].btn-block {
 
 .card-img {
   width: 100%;
-  border-radius: calc(0.25rem - 1px);
+  height: 15rem;
+  object-fit: cover;
+}
+
+.card-img-base {
+  position: absolute;
 }
 
 .card-img-top {
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
@@ -5259,6 +5275,27 @@ input[type="button"].btn-block {
 .accordion .card:last-of-type {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.card-media {
+  position: relative;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card-media::before {
+  display: block;
+  content: "";
+}
+
+.card-aspect-square::before {
+  margin-top: 100%;
+}
+
+.card-aspect-16-9::before {
+  margin-top: 56.25%;
 }
 
 .breadcrumb {

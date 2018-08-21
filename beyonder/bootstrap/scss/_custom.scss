@@ -1,0 +1,304 @@
+@import "shadows";
+
+//alert
+.alert{
+  font-size: $alert-font-size;
+
+  strong{
+    text-transform: uppercase;
+    font-size: $alert-font-size;
+    font-weight: $font-weight-custom;
+  }
+}
+
+.alert-dismissible {
+  //padding-right: ($close-font-size + $alert-padding-x * 2);
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -$alert-padding-y;
+    right: -$alert-padding-x;
+    padding: $alert-padding-y $alert-padding-x;
+    color: inherit;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(theme-color-level($color), $color: $white);
+  }
+}
+
+//Buttons
+.btn{
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
+
+  &.btn-raised{
+    &:not(.btn-link){
+        @include shadow-4dp();
+    }
+  }
+
+  &.btn-rounded{
+    border-radius: $btn-rounded-border;
+  }
+
+  &.btn-flat{
+    border-radius: $border-radius-flat;
+  }
+
+  @include hover-focus {
+      &:not(.btn-link){
+        text-decoration: none;
+        @include shadow-4dp();
+      }
+    }
+
+    &:focus,
+    &.focus {
+      &:not(.btn-link){
+        outline: 0;
+        //box-shadow: $btn-focus-box-shadow;
+        @include focus-shadow();
+      }
+    }
+
+}
+
+.btn-link {
+  font-weight: $btn-font-weight;
+  color: $dark;
+  //background-color: inherit;
+
+  @include hover {
+    text-decoration: underline;
+    border-color: transparent;
+    color: inherit;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: underline;
+    background-color: transparent;
+    color: $dark;
+  }
+
+  &:active {
+    border-color: transparent;
+    outline: 0;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+.btn-lg {
+  @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-v2-#{$color} {
+    @include button-outline-v2-variant($value);
+  }
+}
+
+.btn-gradient-peach {
+  @include button-gradient-variant($white, $gradient-peach);
+}
+.btn-gradient-aqua {
+  @include button-gradient-variant($white, $gradient-aqua);
+}
+.btn-gradient-purple {
+  @include button-gradient-variant($white, $gradient-purple);
+}
+.btn-gradient-blue {
+  @include button-gradient-variant($white, $gradient-blue);
+}
+
+
+//Forms
+.form-control{
+  line-height: $input-btn-line-height;
+  @include input-background-image($blue);
+  background-size: 0 2px, 100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom, center calc(100% - 1px);
+  background-color: transparent;
+  background-clip: padding-box;
+  border: $input-btn-border-width solid $input-border-color;
+
+  &-placeholder {
+      position: absolute;
+      top: -7px;
+      margin: 1rem 0 0 0;
+      pointer-events: none;
+      color: #D2D2D2;
+      transition: all 200ms;
+
+      &.light {
+        color: $white;
+      }
+   }
+
+    &:focus + &-placeholder {
+      font-size: 75%;
+      top: -25px;
+    }
+
+}
+
+.form-group {
+  position: relative;
+}
+
+//Cards
+.card{
+  border: none;
+  @include shadow-4dp();
+
+  .card-body{
+      &-material {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .card-title {
+    &-material{
+      margin-top: 1.875rem;
+    }
+  }
+}
+
+.card-header{
+  font-size: $font-size-lg;
+  border-bottom: none;
+  border-radius: 0.25rem;
+}
+
+.card-material{
+  padding: 3.125rem 0;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  margin-top: -2.50rem;
+  background-color: $teal;
+  color: $white;
+  @include shadow-big-navbar();
+
+  &.thin{
+    padding: 1.5rem 0;
+  }
+
+}
+
+.card-material-title{
+  margin-top: 1.875rem;
+}
+
+.card-picture {
+  height: 60%;
+  position: relative;
+  border-radius: 0.4rem;
+  //padding: 3.125rem 0;
+  //padding: 2.50rem 0;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: -4.25rem;
+  @include shadow-8dp();
+}
+
+.card-img{
+  height: 15rem;
+  object-fit: cover;
+}
+
+//Close
+.close{
+  @if (background-color == $gray-100) {
+    color: $dark;
+  }
+  @else{
+    color: $close-color;
+  }
+
+  &:not(:disabled):not(.disabled) {
+
+    @include hover-focus {
+      text-decoration: none;
+      opacity: .9;
+    }
+
+    // Opinionated: add "hand" cursor to non-disabled .close elements
+    cursor: pointer;
+  }
+}
+
+//Modal
+
+.modal-content{
+  @include shadow-24dp();
+}
+
+.modal-header{
+  border-bottom: none;
+
+}
+
+.modal-title{
+  font-weight: $font-weight-base;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+//Page View
+.page{
+  @include shadow-16dp();
+}
+
+//Navbar
+.navbar{
+  @include shadow-big-navbar();
+}
+
+
+//images
+
+.img-thumbnail{
+
+  @include shadow-big-navbar();
+}
+
+
+//Shadows
+.shadow-image{
+  @include shadow-big-navbar();
+}
+
+//extra
+
+dt, dd{
+  font-size: 1.25rem !important;
+}
+
+//badge
+.badge{
+  border-radius: $border-radius;
+}
+
+.badge-pill{
+  @include border-radius($badge-pill-border-radius);
+}

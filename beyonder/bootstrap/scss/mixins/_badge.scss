@@ -1,0 +1,18 @@
+@mixin badge-variant($bg, $color) {
+  @if ($bg == $gray-100) {
+    $color: $dark;
+  }
+  @else{
+    $color: $white;
+  }
+  color: $color;
+  background-color: $bg;
+
+  &[href] {
+    @include hover-focus {
+      //color: color-yiq($bg);
+      text-decoration: none;
+      background-color: lighten($bg, 10%);
+    }
+  }
+}

@@ -13,6 +13,7 @@
   //border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
   @include shadow-4dp();
+  //@include card-container-layout;
 
   > hr {
     margin-right: 0;
@@ -163,17 +164,27 @@
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-top: -4.25rem;
+
   @include shadow-8dp();
 }
 
 .card-img {
   width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-  @include border-radius($card-inner-border-radius);
+  height: 15rem;
+  object-fit: cover;
+  //@include border-radius($card-inner-border-radius);
+}
+
+.card-img-base{
+  position: absolute;
 }
 
 // Card image caps
 .card-img-top {
   width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   @include border-top-radius($card-inner-border-radius);
 }
 
@@ -345,4 +356,25 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+}
+
+
+//Aspect
+
+.card-media {
+  @include card-media-aspect-ratio-base;
+
+  position: relative; // Child element `__media-content` has `position: absolute`
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card-aspect-square {
+  @include card-media-aspect-ratio(1, 1);
+}
+
+.card-aspect-16-9 {
+  @include card-media-aspect-ratio(16, 9);
 }

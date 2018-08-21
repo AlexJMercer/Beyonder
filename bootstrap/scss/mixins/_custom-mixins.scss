@@ -63,3 +63,23 @@
   transition-duration: $duration;
   transition-timing-function: $md-animation-curve-default;
 }
+
+@mixin card-media-aspect-ratio-base {
+  &::before {
+    display: block;
+    content: "";
+  }
+}
+
+@mixin card-media-aspect-ratio($x, $y) {
+  &::before {
+    // This clever trick brought to you by: http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+    margin-top: percentage($y / $x);
+  }
+}
+
+@mixin card-container-layout {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
