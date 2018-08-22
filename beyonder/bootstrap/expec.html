@@ -31,7 +31,7 @@
   </head>
   <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-soft-transparency-dark">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -52,14 +52,14 @@
         <form class="form-inline my-2 my-lg-0">
           <div class="navbar-form form-group">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            <button id="changer" class="btn btn-outline-v2-info my-2 my-sm-0" type="button">Change theme</button>
           </div>
         </form>
       </div>
     </nav>
     <div class="container-fluid mt-5">
       <div class="col-8 offset-2 mx-auto mt-5">
-        <div class="card bg-soft-transparency">
+        <div class="card bg-soft-transparency-dark">
           <div class="card-header text-center card-material thin bg-info">
             Coleção: Revistas Playboy <span class="badge badge-success">Completa!</span>
           </div>
@@ -138,6 +138,28 @@
 
                 easing: 'linear' // The CSS3 easing function of the ripple
                 });
+    </script>
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+          function changeClass() {
+            if ( $('.navbar').hasClass('bg-soft-transparency-dark') ) {
+              $('.navbar, .card').removeClass('bg-soft-transparency-dark');
+              $('.navbar').removeClass('navbar-dark').addClass('navbar-light');
+              $('.card-body').removeClass('text-light');
+              $('.navbar, .card').addClass('bg-soft-transparency-light').fadeIn();
+            }
+            else {
+              $('.navbar, .card').removeClass('bg-soft-transparency-light');
+              $('.navbar').removeClass('navbar-light').addClass('navbar-dark');
+              $('.card-body').addClass('text-light');
+              $('.navbar, .card').addClass('bg-soft-transparency-dark').delay(500);
+            }
+          }
+
+          $('#changer').click(changeClass);
+      });
+
     </script>
   </body>
 </html>
