@@ -127,9 +127,10 @@ $border-radius-lg:       0.625rem;
 //$border-radius-sm:       0.125rem;
 $border-radius-flat:     0;
 
+
 $font-weight-custom: 500;
 //$font-weight:;
-
+$font-size-custom: .75rem;
 $font-family-sans-serif:    Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 $font-family-base:          $font-family-sans-serif;
 
@@ -151,6 +152,7 @@ $btn-border-radius:              $border-radius;
 $btn-border-radius-lg:           $border-radius;
 $btn-border-radius-sm:           $border-radius;
 $btn-border-radius-flat:         $border-radius-flat;
+
 
 $input-padding-x:                0;//.75rem;
 $input-padding-y:                .5rem;

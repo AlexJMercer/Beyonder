@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+    <title>Firebase example</title>
+  </head>
+  <body>
+    <h1>Firebase example</h1>
+    <pre id='data'></pre>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBbAER-4xBZAj1QrYfEQUo7Q769i3D0fiA",
+      authDomain: "collection-organizer.firebaseapp.com",
+      databaseURL: "https://collection-organizer.firebaseio.com",
+      projectId: "collection-organizer",
+      storageBucket: "collection-organizer.appspot.com",
+      messagingSenderId: "520526213625"
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+    var ref = firebase.database().ref('revistas/');
+    ref.on("value", function(snapshot){
+    output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
+    });
+    </script>
+  </body>
+</html>

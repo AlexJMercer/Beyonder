@@ -1,0 +1,20 @@
+body{
+  background-image: url('https://i.imgur.com/txJ6DPX.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: consolas;
+}
+
+.image-box{
+  width: 100%;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.btn{
+  font-size: 1rem;
+  font-weight: 600;
+
+}

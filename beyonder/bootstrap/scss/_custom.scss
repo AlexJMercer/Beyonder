@@ -35,7 +35,8 @@
   text-transform: uppercase;
   outline: 0;
   border: 0;
-  @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
+  @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-custom, $input-btn-line-height, $btn-border-radius);
+  transition: all 0.15s ease-in-out;
 
   &.btn-raised{
     &:not(.btn-link){
@@ -58,12 +59,20 @@
       }
     }
 
-    &:focus,
-    &.focus {
-      &:not(.btn-link){
-        outline: 0;
-        //box-shadow: $btn-focus-box-shadow;
-        @include focus-shadow();
+
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      background-image: none;
+      @include shadow-4dp();
+
+      &:focus,
+      &.focus {
+        &:not(.btn-link){
+          outline: 0;
+          //box-shadow: $btn-focus-box-shadow;
+          @include focus-shadow();
+        }
       }
     }
 
@@ -167,7 +176,7 @@
 //Cards
 .card{
   border: none;
-  @include shadow-4dp();
+  @include shadow-2dp();
 
   .card-body{
       &-material {
@@ -186,6 +195,7 @@
   font-size: $font-size-lg;
   border-bottom: none;
   border-radius: 0.25rem;
+  padding: 1rem 1.25rem;
 }
 
 .card-material{
@@ -215,7 +225,7 @@
   //padding: 2.50rem 0;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  margin-top: -4.25rem;
+  margin-top: -2rem;
   @include shadow-8dp();
 }
 
@@ -301,4 +311,9 @@ dt, dd{
 
 .badge-pill{
   @include border-radius($badge-pill-border-radius);
+}
+
+.page{
+  //max-width:874px;
+  //max-height: 1240px;
 }
