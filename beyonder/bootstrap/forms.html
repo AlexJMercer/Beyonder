@@ -132,6 +132,13 @@
 
 
       <form>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="">
+          Tooltip on top
+        </button>
+
+        <!-- HTML to write -->
+        <a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
+
         <div class="form-label-group">
           <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
           <label for="inputEmail">Email address</label>
@@ -253,6 +260,12 @@
       //Waves.attach('.checkbox', ['waves-circle', 'waves-light']);
 
 
+    </script>
+
+    <script>
+      $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+      });
     </script>
   </body>
 </html>

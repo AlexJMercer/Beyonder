@@ -317,3 +317,90 @@ dt, dd{
   //max-width:874px;
   //max-height: 1240px;
 }
+
+
+//Tooltip
+.bs-tooltip-top {
+  padding: $tooltip-arrow-height 0;
+
+  .arrow {
+    bottom: 0;
+
+    &::before {
+      top: 0;
+      border-width: $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+      border-top-color: $tooltip-arrow-color;
+    }
+  }
+}
+
+.bs-tooltip-right {
+  padding: 0 $tooltip-arrow-height;
+
+  .arrow {
+    left: 0;
+    width: $tooltip-arrow-height;
+    height: $tooltip-arrow-width;
+
+    &::before {
+      right: 0;
+      border-width: ($tooltip-arrow-width / 2) $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+      border-right-color: $tooltip-arrow-color;
+    }
+  }
+}
+
+.bs-tooltip-bottom {
+  padding: $tooltip-arrow-height 0;
+
+  .arrow {
+    top: 0;
+
+    &::before {
+      bottom: 0;
+      border-width: 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
+      border-bottom-color: $tooltip-arrow-color;
+    }
+  }
+}
+
+.bs-tooltip-left {
+  padding: 0 $tooltip-arrow-height;
+
+  .arrow {
+    right: 0;
+    width: $tooltip-arrow-height;
+    height: $tooltip-arrow-width;
+
+    &::before {
+      left: 0;
+      border-width: ($tooltip-arrow-width / 2) 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
+      border-left-color: $tooltip-arrow-color;
+    }
+  }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  max-width: $tooltip-max-width;
+  padding: $tooltip-padding-y $tooltip-padding-x;
+  color: $tooltip-color;
+  text-align: center;
+  background-color: $tooltip-bg;
+  @include border-radius($tooltip-border-radius);
+}
+
+.tooltip-danger{
+  .tooltip-inner{
+    background-color: $danger;
+  }
+
+  .bs-tooltip-top{
+    .arrow{
+      &::before{
+        border-top-color: $danger;
+      }
+    }
+  }
+
+}
